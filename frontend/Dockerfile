@@ -1,6 +1,6 @@
 FROM node:20.11.1-alpine
 
-WORKDIR /frontend
+WORKDIR /dashboard
 
 COPY package.json .
 
@@ -14,4 +14,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["serve", "-s", "dist"]
+CMD ["npm", "start"]
