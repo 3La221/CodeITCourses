@@ -6,7 +6,7 @@ services:
       context: ./backend
     command: gunicorn base.wsgi:application --bind 0.0.0.0:8000
     ports:
-      - "80012:8000"
+      - "8012:8000"
     volumes:
       - ./backend:/backend
     
@@ -15,4 +15,4 @@ services:
     build:
       context: ./dashboard
     ports:
-      - "30012:3000"
+      - "3012:3000"
