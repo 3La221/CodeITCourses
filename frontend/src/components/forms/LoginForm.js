@@ -9,6 +9,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Cookies from 'js-cookie';
+import axiosService from '@/helpers/axios'
 
 const formSchema = z.object({
   email: z.string().email().nonempty("Email is required"),
@@ -28,13 +29,41 @@ const LoginForm = () => {
   const router = useRouter()
 
   const [error, setError] = useState(null)
+  const handleSubscribe = (course_id)=>{
+    
+        axiosService.post(`${process.env.NEXT_PUBLIC_API_URL}student/subscribe/${course_id}/`)
+        .then((res)=>{
+
+              router.push("/dashboard/my-courses")
+
+
+        })
+        .catch((err)=>{
+          if(err) {
+            if(err.response.status === 400){
+              router.push("/dashboard/my-courses")
+        }
+    console.log(err)
+
+          }
+              
+        })
+
+  }
 
   const handleSubmit = (data) => {
+    
+    
     axios.post(process.env.NEXT_PUBLIC_API_URL + 'student/login/', data)
       .then((res) => {
 
         Cookies.set('auth', JSON.stringify(res.data) , { expires: 77 })
-
+        const course_id = localStorage.getItem("course_id")
+    if(course_id){
+      handleSubscribe(course_id)
+      localStorage.removeItem("course_id")
+      return
+    }
         router.push('/dashboard')
 
       })

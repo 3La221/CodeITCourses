@@ -14,20 +14,29 @@ import { Button } from "../ui/button"
 import axios from "axios"
 import axiosService from "@/helpers/axios"
 import { useRouter } from "next/navigation"
+import { getUser } from "@/helpers/actions"
 
 const ConfirmSubscribtionModal = ({isOpen ,setIsModalOpen , course  }) => {
 
       const  router = useRouter()
+      const user = getUser()
+
 
 
       const handleSubscribe = ()=>{
+        if(!user){
+          localStorage.setItem("course_id", course.id)
+        
+            router.push("/login")
+            return
+
+        }
             axiosService.post(`${process.env.NEXT_PUBLIC_API_URL}student/subscribe/${course.id}/`)
             .then((res)=>{
 
               setIsModalOpen(false)
                   router.push("/dashboard/my-courses")
-              
-
+    
 
             })
             .catch((err)=>{
@@ -54,7 +63,13 @@ const ConfirmSubscribtionModal = ({isOpen ,setIsModalOpen , course  }) => {
                   close
                 </Button>
               </DialogClose>
-              <Button onClick={handleSubscribe}>
+              <Button onClick={()=> {
+
+                  handleSubscribe()
+                
+              }
+
+               }>
                   Confirm
               </Button>
             </DialogFooter>
