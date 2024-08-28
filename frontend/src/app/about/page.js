@@ -10,8 +10,8 @@ const About = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About CodeIT DZ</h2>
             <p className="text-lg leading-relaxed mb-6">
-              At CodeIT DZ, we specialize in providing top-notch IT and development courses tailored for both beginners and professionals. Our mission is to empower you with the skills and knowledge necessary to excel in today's technology-driven world. Join us to master the art of IT with hands-on experience and expert guidance.
-            </p>
+  At CodeIT DZ, we specialize in providing top-notch IT and development courses tailored for both beginners and professionals. Our mission is to empower you with the skills and knowledge necessary to excel in today&apos;s technology-driven world. Join us to master the art of IT with hands-on experience and expert guidance.
+</p>
             <div className="flex items-center space-x-4">
               <MapPin size={24} />
               <p className="text-lg">Location: Birkhadem, Algiers, Algeria</p>

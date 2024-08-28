@@ -101,7 +101,7 @@ export function DashboardSideBar({ children }) {
           <div className="w-full flex-1">
             <form>
               <div className="relative">
-               Hello ,  {user.first_name + " " + user.last_name}
+               Hello 
               </div>
             </form>
           </div>

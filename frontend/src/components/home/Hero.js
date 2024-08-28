@@ -20,7 +20,7 @@ const Hero = () => {
           <h1 className="h1 mb-4">Master IT and Development with Us</h1>
           <p className="subtitle max-w-xl mb-8">
             At CodeIT DZ, we provide hands-on, in-person courses to help you excel in the IT and development fields. 
-            Our expert-led programs are designed to equip you with the skills needed to succeed in today's tech-driven world.
+            Our expert-led programs are designed to equip you with the skills needed to succeed in today&apos;s tech-driven world.
           </p>
           {/* Buttons */}
           <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mb-6">

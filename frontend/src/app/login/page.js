@@ -22,7 +22,7 @@ const Login = () => {
           <LoginForm />
         </CardContent>
         <CardFooter>
-        Don't have an account on Code It?
+        Don&apos;t have an account on Code It?
 
           <Link href='/register' className='hover:underline transition-all mx-2'>
             Create your account
