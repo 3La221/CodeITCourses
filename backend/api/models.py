@@ -3,8 +3,7 @@ from django.contrib.auth.models import AbstractUser , UserManager
 import uuid
 from enum import Enum
 from django.utils import timezone
-from django.contrib.contenttypes.fields import GenericForeignKey
-from django.contrib.contenttypes.models import ContentType
+
 
 # Create your models here.
 
