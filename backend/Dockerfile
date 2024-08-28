@@ -2,9 +2,13 @@ FROM python:3.11.4-slim-buster
 ENV PYTHONUNBUFFERED 1
 
 # Install the required version of SQLite
+# Install dependencies
 RUN apt-get update && \
-    apt-get install -y sqlite3 libsqlite3-dev && \
-    sqlite3 --version  # To confirm the installed version
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    libsqlite3-dev \
+    sqlite3 \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /backend
 
