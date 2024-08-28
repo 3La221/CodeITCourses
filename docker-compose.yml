@@ -13,6 +13,6 @@ services:
 
   frontend:
     build:
-      context: ./dashboard
+      context: ./frontend
     ports:
       - "3012:3000"
