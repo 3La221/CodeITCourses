@@ -1,6 +1,11 @@
 FROM python:3.11.4-slim-buster
 ENV PYTHONUNBUFFERED 1
 
+# Install the required version of SQLite
+RUN apt-get update && \
+    apt-get install -y sqlite3 libsqlite3-dev && \
+    sqlite3 --version  # To confirm the installed version
+
 WORKDIR /backend
 
 COPY requirements.txt requirements.txt
@@ -19,4 +24,5 @@ EXPOSE 8000
 RUN python manage.py collectstatic --noinput
 RUN python manage.py makemigrations
 RUN python manage.py migrate
+
 CMD ["gunicorn", "base.wsgi:application", "--bind", "0.0.0.0:8000"]
