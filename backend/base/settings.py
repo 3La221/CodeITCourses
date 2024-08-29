@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-55#&0(bu=#9ke+h9k-)*6savguzdi6j%&f1lgu1$ux0md7fvqh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["86.38.217.190","86.38.217.190:8012","codeitdz.com","www.codeitdz.com","https://codeitdz.com","https://www.codeitdz.com"]
+ALLOWED_HOSTS = ["86.38.217.190","86.38.217.190:8012","codeitdz.com",
+                 "www.codeitdz.com","https://codeitdz.com",
+                 "https://codeitdz.com/formation","https://codeitdz.com/formation/",
+                 "https://www.codeitdz.com" ,
+                 "127.0.0.1"]
 
 
 # Application definition
@@ -63,7 +67,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-        "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -71,8 +75,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
-
+# OR
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Adjust this to match your frontend URL
+    "http://86.38.217.190:3012",
+    "https://codeitdz.com",
+]
 ROOT_URLCONF = 'base.urls'
 
 TEMPLATES = [

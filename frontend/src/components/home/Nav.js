@@ -26,7 +26,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             <div className="flex items-center space-x-2 text-lg relative">
             <span className='text-primary' >{link.name}</span>
 
-            <div className="icon-container">
+            <div className="icon-container hidden xl:flex">
               <div className={`filled-icon ${link.path === path ? 'opacity-100' : 'opacity-0'} transition-all duration-500 ease-in`}>
                 {link.filledIcon}
               </div>
