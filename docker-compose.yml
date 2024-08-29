@@ -17,4 +17,4 @@ services:
     ports:
       - "3012:3000"
     env_file:
-      - ./frontend/.env.loca
+      - ./frontend/.env.local
