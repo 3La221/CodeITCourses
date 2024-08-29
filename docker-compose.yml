@@ -15,4 +15,4 @@ services:
     build:
       context: ./frontend
     ports:
-      - "443:3000"
+      - "3000:3000"
