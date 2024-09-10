@@ -11,4 +11,4 @@ router.register(r"subscribtion",SubscriptionViewSet,basename="subscribtion")
 
 urlpatterns = [
       path("fb_pixel/",get_fb_pixel),
-]
+] + router.urls
