@@ -83,7 +83,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://86.38.217.190:3012",
     "https://codeitdz.com",
     "https://formation-back.codeitdz.com",
-    "formation-back.codeitdz.com"
+    "https://formation.codeitdz.com",
 ]
 ROOT_URLCONF = 'base.urls'
 
