@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["86.38.217.190","86.38.217.190:8012","codeitdz.com",
                  "https://codeitdz.com/formation","https://codeitdz.com/formation/",
                  "https://www.codeitdz.com" ,
                  "formation-back.codeitdz.com",
-                 "https://formation.codeitdz.com",
+                 "formation.codeitdz.com",
                  "127.0.0.1"]
 
 
