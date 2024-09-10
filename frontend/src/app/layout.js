@@ -1,3 +1,5 @@
+"use client";
+
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Head from 'next/head';
@@ -8,15 +10,13 @@ import Footer from "@/components/home/Footer";
 //theme provider
 import ThemeProvider from "@/components/ThemeProvider";
 
+// Import metadata from the new file
+import { metadata } from './metadata';
+
 const cairo = Cairo({ 
   subsets: ["arabic"],
   variable: "--font-cairo"
 });
-
-export const metadata = {
-  title: "Code It - Learn to code",
-  description: "Get your education online",
-};
 
 export default function RootLayout({ children }) {
   useEffect(() => {
