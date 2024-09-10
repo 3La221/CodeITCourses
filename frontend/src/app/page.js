@@ -26,7 +26,7 @@ export default function Home() {
     <div className={`fade-in-slide-up ${isVisible ? 'visible' : ''}`}>
       <Hero />
       {/* Use the config data as needed */}
-      <pre></pre>
+      <pre>{configFile}</pre>
     </div>
   );
 }

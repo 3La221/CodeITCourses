@@ -77,6 +77,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://formation.codeitdz.com",
+     "https://formation-back.codeitdz.com",
+]
 # OR
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Adjust this to match your frontend URL
