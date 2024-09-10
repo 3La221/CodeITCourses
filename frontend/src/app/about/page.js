@@ -34,16 +34,14 @@ const About = () => {
 
             {/* Social Media Links */}
             <div className="flex space-x-6">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://web.facebook.com/codeitdz" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook size={28} className="hover:text-blue-600 dark:hover:text-blue-400" />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/codeit_dz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram size={28} className="hover:text-pink-600 dark:hover:text-pink-400" />
               </a>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter size={28} className="hover:text-blue-400 dark:hover:text-blue-300" />
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              
+              <a href="https://www.linkedin.com/company/code-it-dz/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin size={28} className="hover:text-blue-800 dark:hover:text-blue-600" />
               </a>
             </div>
