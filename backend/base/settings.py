@@ -81,7 +81,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Adjust this to match your frontend URL
     "http://86.38.217.190:3012",
     "https://codeitdz.com",
-    "https://formation-back.codeitdz.com/"
+    "https://formation-back.codeitdz.com"
 ]
 ROOT_URLCONF = 'base.urls'
 
