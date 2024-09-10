@@ -14,7 +14,7 @@ services:
     build:
       context: ./frontend
     ports:
-      - "9013:3000"
+      - "4013:3000"
     env_file:
       - ./frontend/.env.local
     volumes:
