@@ -10,6 +10,7 @@ from .filters import *
 from django.db.models import Count,Avg
 from rest_framework.permissions import IsAuthenticated,IsAdminUser,IsAuthenticatedOrReadOnly,AllowAny
 from .permission import SameStudentRequest
+from rest_framework.decorators import api_view
 
 # Create your views here.
 
@@ -173,5 +174,11 @@ class LiveSessionViewSet(viewsets.ModelViewSet):
 
 
 
-            
+@api_view(['GET'])
+def get_fb_pixel(request):
+      try:
+            admin = AdminInfo.objects.first()
+            return Response({"facebook_pixel":admin.facebook_pixel},status=status.HTTP_200_OK)
+      except:
+            return Response({"message":"Something went wrong"},status=status.HTTP_400_BAD_REQUEST)
             

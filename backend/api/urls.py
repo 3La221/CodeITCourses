@@ -9,4 +9,6 @@ router.register(r"teacher",TeacherViewSet,basename="teacher")
 router.register(r"course",CourseViewSet,basename="course")
 router.register(r"subscribtion",SubscriptionViewSet,basename="subscribtion")
 
-urlpatterns = router.urls
+urlpatterns = [
+      path("fb_pixel/",get_fb_pixel),
+]

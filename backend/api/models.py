@@ -124,5 +124,6 @@ class LiveSession(models.Model):
 
 
 
-
+class AdminInfo(models.Model):
+    facebook_pixel = models.CharField(max_length=250,null=True,blank=True)
 
