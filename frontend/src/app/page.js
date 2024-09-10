@@ -1,25 +1,32 @@
 "use client"
 import Hero from "@/components/home/Hero";
-import Image from "next/image";
-import { useState ,useEffect} from "react";
-
-
-
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [configFile, setConfigFile] = useState('');
 
-  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    setIsVisible(true);
 
-useEffect(() => {
-  setIsVisible(true);
-}, []);
+    const fetchConfigFile = async () => {
+      const response = await fetch('/config.txt');
+      if (response.ok) {
+        const configFile = await response.text();
+        setConfigFile(configFile);
+      } else {
+        console.error('Error fetching config file');
+      }
+    };
+
+    fetchConfigFile();
+  }, []);
+
   return (
-   
-    
     <div className={`fade-in-slide-up ${isVisible ? 'visible' : ''}`}>
-          <Hero/>
-
-      </div>
-
+      <Hero />
+      {/* Use the config data as needed */}
+      <pre></pre>
+    </div>
   );
 }

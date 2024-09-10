@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes';
 
 
 const links = [
-  { path: "/formation", name: "Home", filledIcon : <RiHomeSmile2Fill className='text-primary' size={22} /> , outlineIcon : <RiHomeSmile2Line size={22} className='text-primary' /> },
+  { path: "/", name: "Home", filledIcon : <RiHomeSmile2Fill className='text-primary' size={22} /> , outlineIcon : <RiHomeSmile2Line size={22} className='text-primary' /> },
   { path: "/courses", name: "Courses", filledIcon : <IoBook  size={22} className='text-primary' /> , outlineIcon : <IoBookOutline size={22} className='text-primary' /> },
   { path: "/about", name: "About", filledIcon: <RiInformationFill size={22}  className='text-primary' /> , outlineIcon : <RiInformationLine size={22} className='text-primary' /> },
 
