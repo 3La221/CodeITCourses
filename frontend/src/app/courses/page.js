@@ -61,7 +61,7 @@ const Courses = () => {
 
         <div className="flex flex-col lg:flex-row gap-12 w-full">
           {/* Filters */}
-          <div className="flex flex-col gap-4 w-full lg:w-1/4">
+          {/* <div className="flex flex-col gap-4 w-full lg:w-1/4">
             <div className="flex gap-3 mb-4">
               <Input placeholder="Search courses" className="py-2 px-4 w-full" />
               <Button className="px-6 py-2 flex items-center gap-2">
@@ -69,7 +69,6 @@ const Courses = () => {
               </Button>
             </div>
 
-            {/* Levels */}
             <div>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">Levels</h2>
               <hr className="my-2" />
@@ -85,7 +84,6 @@ const Courses = () => {
               </div>
             </div>
 
-            {/* Modes */}
             <div>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">Mode</h2>
               <hr className="my-2" />
@@ -100,7 +98,7 @@ const Courses = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Courses */}
           <div className="flex-1">

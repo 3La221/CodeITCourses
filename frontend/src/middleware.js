@@ -4,11 +4,7 @@ import { cookies } from 'next/headers';
 export function middleware(req) {
   const url = req.nextUrl.clone();
 
-  // 1. Redirect '/' to '/formations'
-  if (url.pathname === '/') {
-    url.pathname = '/formations';
-    return NextResponse.redirect(url);
-  }
+  
 
   // 2. Handle authentication for protected routes
   const cookieStore = cookies();

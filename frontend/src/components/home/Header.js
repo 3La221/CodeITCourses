@@ -53,7 +53,7 @@ const Header = () => {
       } ${pathname.startsWith("/dashboard") && 'hidden'} sticky top-0 z-30 transition-all`}
     >
       <div className='container mx-auto flex items-center justify-between'>
-        <Logo style="mt-2 xl:h-[15%] xl:w-[15%] h-[25%] w-[25%]" />
+        <Logo style="mt-2 xl:h-[15%] xl:w-[15%] h-[40%] w-[40%] md:h-[25%] md:w-[25%]" />
 
         {/* Mobile Menu Button */}
         <div className="xl:hidden flex items-center">
