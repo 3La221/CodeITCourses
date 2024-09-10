@@ -6,15 +6,14 @@ services:
       context: ./backend
     command: gunicorn base.wsgi:application --bind 0.0.0.0:8000
     ports:
-      - "8012:8000"
-    volumes:
-      - ./backend:/backend
+      - "9013:8000"
+    
     
 
   frontend:
     build:
       context: ./frontend
     ports:
-      - "3012:3000"
+      - "9013:3000"
     env_file:
       - ./frontend/.env.local

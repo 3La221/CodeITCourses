@@ -1,6 +1,6 @@
 FROM node:20.11.1-alpine
 
-WORKDIR /dashboard
+WORKDIR /frontend
 
 COPY package.json .
 
