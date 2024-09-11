@@ -104,7 +104,7 @@ const MyCourses = () => {
         </tbody>
       </table>
       {isModalOpen && <CancelSubscribtionModal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} course={selectedCourse} fetchMyCourses={fetchMyCourses} />}
-      {isDetailsModalOpen && <DetailsModal isOpen={isDetailsModalOpen} setIsModalOpen={setIsDetailsModalOpen} text={`Contact The Admin in Whatsapp : 0552987732`} />}
+      {isDetailsModalOpen && <DetailsModal isOpen={isDetailsModalOpen} setIsModalOpen={setIsDetailsModalOpen} text={`Contact The Admin in Whatsapp : +213773031327`} />}
     </div>
   );
 };
