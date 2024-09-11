@@ -34,7 +34,7 @@ const Header = () => {
     };
 
     fetchUser();
-  }, []);
+  }, [user]);
 
   const handleNavToggle = () => {
     setNavOpen(!navOpen);
@@ -105,19 +105,13 @@ const Header = () => {
               underlineStyles="hidden"
             />
             <div className="mt-6 flex flex-col items-start">
-              {user ? 
-                <Link href="/dashboard">
+              <div className="mt-6 flex flex-col items-start">
+                <Link href={user ? "/dashboard" : "/login"}>
                   <Button onClick={closeNav}>
-                    Dashboard
+                    {user ? "Dashboard" : "Login"}
                   </Button>
                 </Link>
-                :
-                <Link href="/login">
-                  <Button onClick={closeNav}>
-                    Login
-                  </Button>
-                </Link>
-              }
+              </div>
               <ThemeToggler />
             </div>
           </div>
