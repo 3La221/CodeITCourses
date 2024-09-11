@@ -10,20 +10,17 @@ import Link from 'next/link';
 
 
 const icons = [
+     
       {
-            path:"/",
-            name: <RiYoutubeFill/> 
-      },
-      {
-            path:"/",
+            path:"https://www.linkedin.com/company/code-it-dz/posts/?feedView=all",
             name:<RiLinkedinFill/>
       },
       {
-            path:"/",
+            path:"https://web.facebook.com/codeitdz",
             name:<RiFacebookFill/>
       },
       {
-            path:"/",
+            path:"https://www.instagram.com/codeit_dz/",
             name:<RiInstagramFill/>
       }
 ]

@@ -29,7 +29,7 @@ const Hero = () => {
                 Join Us <CircleArrowOutUpRight size={16} />
               </Button>
             </Link>
-            <Link href='/contact' passHref>
+            <Link href='' passHref>
               <Button variant="secondary" className="gap-x-2">
                 Contact Us <Send size={16} />
               </Button>
