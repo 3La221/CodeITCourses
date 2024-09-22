@@ -1,4 +1,5 @@
 'use client';
+
 import Link from "next/link";
 import {
   Home,
@@ -13,14 +14,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -101,31 +95,16 @@ export function DashboardSideBar({ children }) {
           <div className="w-full flex-1">
             <form>
               <div className="relative">
-               Hello 
+               Hello {user?.first_name} {user?.last_name}
               </div>
             </form>
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="secondary" size="icon" className="rounded-full">
-                <CircleUser className="h-5 w-5" />
-                <span className="sr-only">User Menu</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Settings</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={()=>{
-                logout(router)
-              }}>
-                
-                Logout
-
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button  onClick={()=>{
+            logout(router)
+          }} >
+            Logout
+          </Button>
+          
 
           <ThemeToggler />
         </header>

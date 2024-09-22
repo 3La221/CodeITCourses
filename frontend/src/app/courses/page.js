@@ -13,24 +13,7 @@ import ConfirmSubscribtionModal from '@/components/modals/ConfirmSubscribtionMod
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   
-  const subjects = [
-    { id: "python", label: "Python Development" },
-    { id: "web", label: "Web Development" },
-    { id: "java", label: "Java Programming" },
-    { id: "cybersecurity", label: "Cybersecurity" },
-  ];
-
-  const levels = [
-    { id: "beginner", label: "Beginner" },
-    { id: "intermediate", label: "Intermediate" },
-    { id: "advanced", label: "Advanced" },
-  ];
-
-  const modes = [
-    { id: "online", label: "Online (Live)" },
-    { id:"onlineRecorded", label: "Online (Recorded)" },
-    { id: "offline", label: "Offline" },
-  ];
+  
 
   useEffect(() => {
     axios.get(`${process.env.NEXT_PUBLIC_API_URL}course`)

@@ -8,6 +8,8 @@ import { usePathname } from 'next/navigation'
 import { Button } from "../ui/button";
 import Link from 'next/link'
 import { getUser } from '@/helpers/actions'
+import { set } from 'react-hook-form'
+import Cookies from 'js-cookie'
 
 const Header = () => {
   const [header, setHeader] = useState(false)
@@ -27,14 +29,19 @@ const Header = () => {
     }
   }, [])
 
+
+  
   useEffect(() => {
     const fetchUser = async () => {
-      const userData = await getUser();
-      setUser(userData);
+      const auth = Cookies.get("auth");
+      if (auth) {
+        const parsedAuth = JSON.parse(auth); // Parse the JSON string
+        setUser(parsedAuth?.user);   
+      }
     };
-
+  
     fetchUser();
-  }, [user]);
+  }, []); 
 
   const handleNavToggle = () => {
     setNavOpen(!navOpen);
@@ -72,7 +79,7 @@ const Header = () => {
             linkStyles="relative hover:text-primary transition-all"
             underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
           />
-          {user ? 
+          {user  ? 
             <Link href="/dashboard">
               <Button>
                 Dashboard

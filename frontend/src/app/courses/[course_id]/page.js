@@ -1,12 +1,10 @@
 "use client";
-import { RiStarSmileFill, RiStarSmileLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import CourseInfoCard from "@/components/course/CourseInfoCard";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import axiosService from "@/helpers/axios";
-import { useRouter } from "next/navigation";
+
 import ConfirmSubscribtionModal from "@/components/modals/ConfirmSubscribtionModal";
 
 const Course = () => {

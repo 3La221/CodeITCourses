@@ -1,14 +1,7 @@
-import {
-      Card,
-      CardContent,
-      CardDescription,
-      CardFooter,
-      CardHeader,
-      CardTitle,
-    } from "@/components/ui/card"
+"use client"
+
 import { Button } from "../ui/button"
-import { RiStarSmileFill , RiStarSmileLine } from "react-icons/ri";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import Link from "next/link";
 import { getUser } from "@/helpers/actions";
 import { useRouter } from "next/navigation";
@@ -24,7 +17,7 @@ const CourseCard = ({course , setSelectedCourse , setIsModalOpen}) => {
 
 
   return (
-    <div className=" flex flex-col  justify-between gap-0 w-[320px]  text-secondary ">
+    <div className=" flex flex-col  justify-between gap-0 w-[320px] hover:scale-105 transition-all ease-in-out text-secondary ">
             <div className="course_img rounded-t-2xl overflow-hidden h-[200px]"> 
         <img
           className="w-full h-auto object-cover"
@@ -37,7 +30,7 @@ const CourseCard = ({course , setSelectedCourse , setIsModalOpen}) => {
             
             <hr className="my-2 mx-3" />
             <Link href={`/courses/${course.id}`}>
-            <div className="course_title text-center text-xl p-2   " >
+            <div className="course_title text-center text-xl p-2 hover:text-blue-400   " >
                   {course.title}
             </div>
             </Link>
@@ -50,12 +43,15 @@ const CourseCard = ({course , setSelectedCourse , setIsModalOpen}) => {
 
             <div className="enroll w-full ">
 
-        {user ? <Button onClick={()=>{  setIsModalOpen(true) ; setSelectedCourse(course) ; }} className="bg-secondary text-primary hover:bg-primary-foreground w-full text-xl">
+        {user ? <Button onClick={()=>{ 
+          console.log("HI") ; 
+          setSelectedCourse(course) ;
+          setIsModalOpen(true) ; }} className="bg-secondary text-primary hover:bg-primary-foreground w-full text-xl">
                     Enroll
                   </Button> : 
                   
                   <Button
-                  onClick={()=>{ localStorage.setItem("course_id", course.id)
+                  onClick={()=>{ 
                     router.push("/login")}} className="bg-secondary text-primary hover:bg-primary-foreground w-full text-xl">
                     Login to Enroll
                   </Button>}

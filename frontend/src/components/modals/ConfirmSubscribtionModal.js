@@ -1,3 +1,4 @@
+"use client"
 import {
       Dialog,
       DialogClose,
@@ -11,7 +12,6 @@ import {
 
 import React from 'react'
 import { Button } from "../ui/button"
-import axios from "axios"
 import axiosService from "@/helpers/axios"
 import { useRouter } from "next/navigation"
 import { getUser } from "@/helpers/actions"
@@ -31,7 +31,7 @@ const ConfirmSubscribtionModal = ({isOpen ,setIsModalOpen , course  }) => {
             return
 
         }
-            axiosService.post(`${process.env.NEXT_PUBLIC_API_URL}student/subscribe/${course.id}/`)
+        axiosService.post(`${process.env.NEXT_PUBLIC_API_URL}student/subscribe/${course.id}/`)
             .then((res)=>{
 
               setIsModalOpen(false)
